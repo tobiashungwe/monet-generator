@@ -1,0 +1,25 @@
+.images-container.hidden {
+    display: none;
+  }
+  
+  .images-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container {
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .image-label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; /* Dark gray */
+  }
+  
+  .image {
+    max-width: 100%;
+    border-radius: 10px;
+  }

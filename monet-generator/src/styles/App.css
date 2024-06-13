@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8eae0; /* Light pastel pink */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f4f8; /* Light pastel blue */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.App {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100vw;
+
+}

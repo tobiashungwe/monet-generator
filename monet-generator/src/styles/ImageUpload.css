@@ -1,0 +1,51 @@
+.upload-container {
+    text-align: center;
+  }
+  
+  .upload-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+  }
+
+  h1{
+    color: lightblue;
+    font-weight: bold;
+    
+}
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .upload-btn {
+
+    background-color: #ff7eb9; /* Pastel pink */
+    color: #fff; /* White */
+    padding: 10px 20px;
+    border: none;
+    width: 7.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: unset;
+  }
+  
+  .upload-btn:hover {
+    background-color: #ff6b9b; /* Lighter pastel pink */
+  }
+  
+  select {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
