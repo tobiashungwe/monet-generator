@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monet-backend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: monet-backend
+  template:
+    metadata:
+      labels:
+        app: monet-backend
+    spec:
+      containers:
+      - name: monet-backend
+        image: tobiti34/monet_api
+        ports:
+        - containerPort: 8000

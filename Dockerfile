@@ -1,20 +1,27 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.9-slim
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
-COPY requirements.txt requirements.txt
+# Install pipenv
+RUN pip install pipenv
 
-# Install any dependencies specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy Pipfile and Pipfile.lock
+COPY Pipfile Pipfile.lock ./
 
-# Copy the FastAPI application files into the container
+# Install dependencies
+RUN pipenv install --deploy --ignore-pipfile
+
+# If you have a requirements.txt, you can use the following lines to install them as well
+COPY requirements.txt .
+RUN pipenv run pip install -r requirements.txt
+
+# Copy the rest of the application's code
 COPY . .
 
-# Expose the port the app runs on
+# Expose port 8000 to the outside world
 EXPOSE 8000
 
-# Command to run the FastAPI application
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the application
+CMD ["pipenv", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
