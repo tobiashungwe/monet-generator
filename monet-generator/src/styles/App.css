@@ -25,3 +25,9 @@ body {
   width: 100vw;
 
 }
+
+.App .container {
+  padding-bottom: 4rem; /* Adjust as needed */
+}
+
+

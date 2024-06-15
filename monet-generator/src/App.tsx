@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ImageUpload from './components/ImageUpload';
 import ImageDisplay from './components/ImageDisplay';
+import SocialMedia from './components/SocialMedia';
 import './styles/App.css';
 
 const App: React.FC = () => {
@@ -14,8 +15,9 @@ const App: React.FC = () => {
         <ImageUpload setBeforeImage={setBeforeImage} setAfterImage={setAfterImage} setLoading={setLoading} />
         <ImageDisplay beforeImage={beforeImage} afterImage={afterImage} loading={loading} />
       </div>
+      <SocialMedia />
     </div>
   );
-};
+};  
 
 export default App;

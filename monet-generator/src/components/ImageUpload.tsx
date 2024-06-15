@@ -59,7 +59,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ setBeforeImage, setAfterImage
     formData.append('image', dataURLToBlob(resizedImageUrl));
     formData.append('generator', generator);
     try {
-      const response = await axios.post('http://4.158.29.169:8000/upload/', formData, {
+      const response = await axios.post('https://monet-generator.hungwevision.com/api/upload/', formData, {
         responseType: 'blob',
       });
       const url = URL.createObjectURL(response.data);
@@ -89,6 +89,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ setBeforeImage, setAfterImage
         <label htmlFor="file-upload" className="upload-btn">Choose Image</label>
         <input type="file" id="file-upload" onChange={handleFileChange} accept="image/*" required />
         <select name="generator" onChange={handleGeneratorChange} required title="Select Generator">
+
           <option value="" disabled selected>Select Generator</option>
           <option value="monet_generator_model.h5">Monet Generator</option>
           <option value="real_generator_model.h5">Real Generator</option>

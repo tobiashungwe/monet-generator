@@ -6,6 +6,7 @@ images/
 gan-getting-started/
 model/
 models/
+monet-api/
 monet-tfrecords-256x256/
 tfrecords-monet-paintings-256x256/
 working

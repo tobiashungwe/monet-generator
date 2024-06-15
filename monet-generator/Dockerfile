@@ -4,6 +4,10 @@ FROM node:16-slim as build
 # Set the working directory in the container
 WORKDIR /app
 
+# Copy the certificate files
+COPY server.key /app/server.key
+COPY server.crt /app/server.crt
+
 # Copy package.json and package-lock.json into the container
 COPY package.json package-lock.json ./
 

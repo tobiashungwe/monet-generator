@@ -1,0 +1,86 @@
+/* styles/SocialMedia.scss */
+
+.app__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: -100px; /* Hide initially */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .text-indicator {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .text-indicator:hover {
+    color: #333;
+  }
+  
+  .text-indicator:hover + .app__social,
+  .app__social:hover {
+    bottom: 10px; /* Show footer */
+    opacity: 1;
+  }
+  
+  .made-by {
+    font-weight: bold;
+    color: #333; /* Adjusted color for better visibility */
+    margin-right: 1rem;
+  }
+  
+  .creator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .creator__name {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .repo-link {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .repo-link:hover {
+    color: #555;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    div {
+        margin-right: 1rem;
+    }
+
+    a:hover{
+        color: #add8e6
+    }
+  }
+  
