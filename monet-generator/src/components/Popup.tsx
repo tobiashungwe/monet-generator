@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles//Popup.css';
 
-const Popup = ({ onClose }) => {
+const Popup = ({ onClose }: { onClose: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const slides = [
@@ -22,7 +22,7 @@ const Popup = ({ onClose }) => {
     }
   ];
 
-  const nextSlide = (index) => {
+  const nextSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
@@ -44,13 +44,13 @@ const Popup = ({ onClose }) => {
                 <p>{slides[0].description}</p>
               </div>
             )}
-            {currentSlide === 2 && (
+            {currentSlide === 2 && slides[1]?.images && (
               <div className="slide">
                 <img src={slides[1].images[0]} alt="Slide 2 Image 1" />
                 <p>{slides[1].description}</p>
               </div>
             )}
-            {currentSlide === 3 && (
+            {currentSlide === 3 &&  slides[2]?.images  && (
               <div className="slide">
                 <img src={slides[2].images[0]} alt="Slide 3 Image" />
                 <p>{slides[2].description}</p>
@@ -64,6 +64,7 @@ const Popup = ({ onClose }) => {
               key={index}
               className={`radio-button ${currentSlide === index + 1 ? 'active' : ''}`}
               onClick={() => nextSlide(index + 1)}
+              title={`Slide ${index + 1}`}
             ></button>
           ))}
         </div>
