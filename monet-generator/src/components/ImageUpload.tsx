@@ -88,7 +88,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ setBeforeImage, setAfterImage
       <form onSubmit={handleSubmit} className="upload-form">
         <label htmlFor="file-upload" className="upload-btn">Choose Image</label>
         <input type="file" id="file-upload" onChange={handleFileChange} accept="image/*" required />
-        <select name="generator" onChange={handleGeneratorChange} required title="Generator">
+        <select name="generator" onChange={handleGeneratorChange} required title="Select Generator">
+
           <option value="" disabled selected>Select Generator</option>
           <option value="monet_generator_model.h5">Monet Generator</option>
           <option value="real_generator_model.h5">Real Generator</option>

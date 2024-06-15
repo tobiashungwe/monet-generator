@@ -41,7 +41,7 @@ def process_image(img):
     # # Convert numpy array to PIL image
     # generated_img = (generated_img * 255).astype(np.uint8)
     # generated_img = Image.fromarray(generated_img)
-    prediction = model.predict(img_array, training=False)[0].numpy() # make predition
+    prediction = model.predict(img_array)[0].numpy() # make predition
     prediction = (prediction * 127.5 + 127.5).astype(np.uint8)   # re-scale
     im = Image.fromarray(prediction)
     
