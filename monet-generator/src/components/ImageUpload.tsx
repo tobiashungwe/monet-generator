@@ -59,7 +59,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ setBeforeImage, setAfterImage
     formData.append('image', dataURLToBlob(resizedImageUrl));
     formData.append('generator', generator);
     try {
-      const response = await axios.post('https://monet-generator-api.hungwevision.com/api/upload/', formData, {
+      const response = await axios.post('https://monet-generator-api.hungwevision.com/upload/', formData, {
         responseType: 'blob',
       });
       const url = URL.createObjectURL(response.data);
