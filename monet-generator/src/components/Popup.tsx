@@ -12,12 +12,12 @@ const Popup = ({ onClose }) => {
     },
     {
       images: [
-        '../assets/image_2024-06-15_164442913.png'
+        'https://raw.githubusercontent.com/tobiashungwe/monet-generator/dev/monet-generator/src/assets/image_2024-06-15_164442913.png'
       ],
       description: "In this app, instead of cats, these were the Monet images. It's trained on nature pictures for best results, but works on any image. Try multiple times for better results.",
     },
     {
-      images: ['../assets/image_2024-06-15_164505977.png'],
+      images: ['https://raw.githubusercontent.com/tobiashungwe/monet-generator/dev/monet-generator/src/assets/image_2024-06-15_164505977.png'],
       description: "Here we explain how the discriminator and generator work. There are two options: from real to Monet image, or from Monet to real image. But the real Monet generator is not working very well. But should work.",
     }
   ];
