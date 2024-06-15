@@ -49,7 +49,7 @@ def process_image(img):
 
     return im
 
-@app.post("/upload/")
+@app.post("/api/upload/")
 async def upload_file(image: UploadFile = File(...), generator: str = Form(...)):
     # Validate the selected generator
     if generator not in MODEL_PATHS:
@@ -76,5 +76,5 @@ async def upload_file(image: UploadFile = File(...), generator: str = Form(...))
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, ssl_keyfile="server.key", ssl_certfile="server.crt", log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=8000,  log_level="info")
 
